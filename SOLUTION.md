@@ -3,7 +3,7 @@ Your Solution Documentation
 
 ## Backend:
 
-I utilized .NET Core for the backend, chosen for its cross-platform capabilities, performance, and robust tooling. Clean architecture was implemented to focus on separating concerns, centralizing business logic and domain entities for better manageability. CQRS (Command Query Responsibility Segregation) pattern and mediator pattern were also used, with the assistance of the MediatR library, to streamline application design and reduce system coupling.
+I utilized **.NET Core** for the backend, chosen for its cross-platform capabilities, performance, and robust tooling. **Clean architecture** was implemented to focus on separating concerns, centralizing business logic and domain entities for better manageability. **CQRS** (Command Query Responsibility Segregation) pattern and mediator pattern were also used, with the assistance of the **MediatR** library, to streamline application design and reduce system coupling.
 
 The system exposes three APIs for data access and operations: job acceptance and decline. The APIs include:
 
@@ -16,17 +16,17 @@ MySQL was used for data querying. Data retrieval across jobs, categories, and su
 
 ## Frontend:
 
-For the frontend, React was chosen as the primary framework. React's robust ecosystem and modular nature facilitate the creation of maintainable and performant user interfaces. As the application scales, the benefits of its component-based structure and the flexibility provided by its hooks API become increasingly apparent.
+The frontend utilizes **React** with **TypeScript**, ensuring type safety and improved developer productivity. React's component-based structure, coupled with the power of hooks, promotes reusability and maintainability.
 
-React Hooks provide a way to use stateful logic and lifecycle methods in functional components, enhancing reusability and separation of concerns. By leveraging hooks, the application can maintain state and manage side effects without the need for class-based components, leading to a more readable and maintainable codebase.
+**React Hooks** allow stateful logic and lifecycle methods in functional components, enhancing readability.
 
-React Query, is employed for data fetching. As the application is mainly server-state dependent, React Query is an ideal fit, offering advanced features like caching, automatic refetching, and background updates, all out-of-the-box. This results in a more resilient, fast, and reactive application, greatly enhancing user experience.
+**React Query** is used for data fetching, providing features like caching, automatic refetching, and background updates. This makes the application fast, resilient, and reactive.
 
-Finally, Axios is used as the HTTP client to interface with the backend API. With its promise-based architecture and interceptors, handling API requests and responses is simplified, making error handling and request configuration more intuitive and robust
+**Axios**, the HTTP client, simplifies interfacing with the backend API, providing intuitive error handling and request configuration. TypeScript integration across these technologies further enhances code reliability and understandability.
 
 ## Styling: Antd
 
-For styling, I selected Ant Design. This comprehensive design system provides a suite of high-quality React components that are out-of-the-box usable and customizable. With its vast selection of components and intuitive API, Ant Design promotes consistency, efficiency, and an overall improved user experience across the application. The system's ability to cater to a variety of design requirements makes it an excellent choice for diverse projects. Furthermore, it encourages best practices in design and implementation, resulting in a more aesthetically pleasing and functional user interface.
+For styling, I selected **Ant Design**. This comprehensive design system provides a suite of high-quality React components that are out-of-the-box usable and customizable. With its vast selection of components and intuitive API, Ant Design promotes consistency, efficiency, and an overall improved user experience across the application. The system's ability to cater to a variety of design requirements makes it an excellent choice for diverse projects. Furthermore, it encourages best practices in design and implementation, resulting in a more aesthetically pleasing and functional user interface.
 
 ## Future Improvements
 
