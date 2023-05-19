@@ -1,0 +1,11 @@
+global using Xunit;
+global using GloboTicket.TicketManagement.API.IntegrationTests.Base;
+global using Hipages.Tradies.Persistence;
+global using Microsoft.AspNetCore.Hosting;
+global using Microsoft.AspNetCore.Mvc.Testing;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using Hipages.Tradies.Api.IntegrationTests.Base;
+global using Hipages.Tradies.Application.Features.Jobs.Queries.GetJobList;
+global using Newtonsoft.Json;

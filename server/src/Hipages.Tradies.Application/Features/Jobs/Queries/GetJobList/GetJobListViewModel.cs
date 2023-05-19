@@ -1,6 +1,4 @@
-﻿using Hipages.Tradies.Domain.Enums;
-
-namespace Hipages.Tradies.Application.Features.Jobs.Queries.GetJobList;
+﻿namespace Hipages.Tradies.Application.Features.Jobs.Queries.GetJobList;
 
 public class GetJobListViewModel
 {

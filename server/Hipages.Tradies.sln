@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{603FB6C6-9D4E-428A-BD68-37EF05938D5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hipages.Tradies.Api", "src\Hipages.Tradies.Api\Hipages.Tradies.Api.csproj", "{DBE801E2-AC67-4857-8347-284BA8BD338C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hipages.Tradies.Api", "src\Hipages.Tradies.Api\Hipages.Tradies.Api.csproj", "{DBE801E2-AC67-4857-8347-284BA8BD338C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{34D8593F-26FB-45E7-A6AC-1217DFF7F120}"
 EndProject
@@ -13,13 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DD3ECC84-F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5B1426BE-A453-4FD0-B396-5DCE18964FD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hipages.Tradies.Application", "src\Hipages.Tradies.Application\Hipages.Tradies.Application.csproj", "{6E96EDCF-FBC4-495B-A670-9EBFFB757F5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hipages.Tradies.Application", "src\Hipages.Tradies.Application\Hipages.Tradies.Application.csproj", "{6E96EDCF-FBC4-495B-A670-9EBFFB757F5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hipages.Tradies.Domain", "src\Hipages.Tradies.Domain\Hipages.Tradies.Domain.csproj", "{D4614BC4-32E1-444E-953F-EBFB285DAD20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hipages.Tradies.Domain", "src\Hipages.Tradies.Domain\Hipages.Tradies.Domain.csproj", "{D4614BC4-32E1-444E-953F-EBFB285DAD20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hipages.Tradies.Infrastructure", "src\Hipages.Tradies.Infrastructure\Hipages.Tradies.Infrastructure.csproj", "{A2A2ECCF-A12B-4498-A67D-A391F96B347D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hipages.Tradies.Infrastructure", "src\Hipages.Tradies.Infrastructure\Hipages.Tradies.Infrastructure.csproj", "{A2A2ECCF-A12B-4498-A67D-A391F96B347D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hipages.Tradies.Persistence", "src\Hipages.Tradies.Persistence\Hipages.Tradies.Persistence.csproj", "{FB40FCB6-9631-4230-B0AC-786F1BF8A156}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hipages.Tradies.Persistence", "src\Hipages.Tradies.Persistence\Hipages.Tradies.Persistence.csproj", "{FB40FCB6-9631-4230-B0AC-786F1BF8A156}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A3809559-649D-405B-8454-7B7B451803B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hipages.Tradies.Application.UnitTests", "test\Hipages.Tradies.Application.UnitTests\Hipages.Tradies.Application.UnitTests.csproj", "{F26D7620-3C42-4BBF-AA23-01476B1586B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hipages.Tradies.Api.IntegrationTests", "test\Hipages.Tradies.Api.IntegrationTests\Hipages.Tradies.Api.IntegrationTests.csproj", "{48BF37B5-453B-44F9-9F62-5140544752AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,14 @@ Global
 		{FB40FCB6-9631-4230-B0AC-786F1BF8A156}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB40FCB6-9631-4230-B0AC-786F1BF8A156}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB40FCB6-9631-4230-B0AC-786F1BF8A156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26D7620-3C42-4BBF-AA23-01476B1586B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26D7620-3C42-4BBF-AA23-01476B1586B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26D7620-3C42-4BBF-AA23-01476B1586B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26D7620-3C42-4BBF-AA23-01476B1586B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BF37B5-453B-44F9-9F62-5140544752AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BF37B5-453B-44F9-9F62-5140544752AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BF37B5-453B-44F9-9F62-5140544752AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BF37B5-453B-44F9-9F62-5140544752AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +74,8 @@ Global
 		{D4614BC4-32E1-444E-953F-EBFB285DAD20} = {DD3ECC84-FE88-421D-8E30-A424D82F576D}
 		{A2A2ECCF-A12B-4498-A67D-A391F96B347D} = {5B1426BE-A453-4FD0-B396-5DCE18964FD7}
 		{FB40FCB6-9631-4230-B0AC-786F1BF8A156} = {5B1426BE-A453-4FD0-B396-5DCE18964FD7}
+		{F26D7620-3C42-4BBF-AA23-01476B1586B6} = {A3809559-649D-405B-8454-7B7B451803B2}
+		{48BF37B5-453B-44F9-9F62-5140544752AA} = {A3809559-649D-405B-8454-7B7B451803B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DDD7F5C4-2474-4446-A619-D367A8E41F45}

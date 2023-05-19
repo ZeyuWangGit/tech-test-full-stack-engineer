@@ -8,6 +8,11 @@ public class JobRepository : BaseRepository<Job>, IJobRepository
 
     public async Task<List<Job>> GetJobListByStatus(JobStatus status)
     {
-        return await DbContext.Jobs.Where(x => x.Status == status).ToListAsync();
+        var result = await DbContext.Jobs.Where(x => x.Status == status)
+            .Include(i => i.Category)
+            .Include(i => i.Suburb)
+            .ToListAsync();
+
+        return result;
     }
 }

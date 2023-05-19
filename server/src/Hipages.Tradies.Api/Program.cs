@@ -1,23 +1,40 @@
+
+using Hipages.Tradies.Api;
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateBootstrapLogger();
+
+Log.Information("TradieApp Starting");
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+Log.Information("TradieApp Starting - 1");
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Host.UseSerilog((context, loggerConfiguration) => loggerConfiguration
+//    .WriteTo.Console()
+//    .ReadFrom.Configuration(context.Configuration));
 
-var app = builder.Build();
+builder.Host.UseSerilog((context, services, configuration) => configuration
+        .ReadFrom.Configuration(context.Configuration)
+        .ReadFrom.Services(services)
+        .Enrich.FromLogContext(),
+    true);
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+Log.Information("TradieApp Starting - 2 ");
 
-app.UseAuthorization();
+var app = builder
+    .ConfigureServices()
+    .ConfigurePipeline();
 
-app.MapControllers();
+Log.Information("TradieApp Starting - 3");
+
+app.UseSerilogRequestLogging();
+
+Log.Information("TradieApp Running");
 
 app.Run();
+
+
+
+public partial class Program { }

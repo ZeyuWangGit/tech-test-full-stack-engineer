@@ -8,6 +8,7 @@ public static class PersistenceServiceRegistration
         services.AddDbContext<TradiesDbContext>(options =>
         {
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+            options.UseSnakeCaseNamingConvention();
         });
 
         services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));

@@ -1,31 +1,18 @@
 version: '3'
 
 services:
-  ui:
-    entrypoint: ["npm", "start"]
-    environment:
-      NODE_ENV: development
-    image: node:10.15-alpine
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./ui:/opt/ui
-    working_dir: /opt/ui
+  # ui:
+  #   entrypoint: ["npm", "start"]
+  #   environment:
+  #     NODE_ENV: development
+  #   image: node:10.15-alpine
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./ui:/opt/ui
+  #   working_dir: /opt/ui
 
-  server:
-    entrypoint: ["npm", "start"]
-    environment:
-      NODE_ENV: development
-    image: node:10.15-alpine
-    links:
-      - database:database
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./server:/opt/server
-    working_dir: /opt/server
-  
-  database:
+  db:
     image: mysql:5.6
     environment:
       MYSQL_ROOT_PASSWORD: hipages
@@ -34,3 +21,14 @@ services:
       - "3306:3306"
     volumes:
       - ./docker/mysql:/docker-entrypoint-initdb.d
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+  
+  
