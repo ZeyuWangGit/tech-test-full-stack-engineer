@@ -44,6 +44,9 @@ Ensure Docker is installed and running on your machine. Follow these steps to ru
 Navigate to the root folder of the project.
 ```
  docker compose up
+ or
+ docker-compose up -d
  ```
+ The first is interactive mode.SS
 Execute docker-compose up -d command. This will set up and run three containers: the backend service, the UI application, and the MySQL database.
 Access the UI at http://localhost:3000.
