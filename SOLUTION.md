@@ -47,6 +47,6 @@ Navigate to the root folder of the project.
  or
  docker-compose up -d
  ```
- The first is interactive mode.SS
+ The first is interactive mode.
 Execute docker-compose up -d command. This will set up and run three containers: the backend service, the UI application, and the MySQL database.
 Access the UI at http://localhost:3000.
