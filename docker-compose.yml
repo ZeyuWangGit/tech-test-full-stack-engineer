@@ -1,17 +1,6 @@
 version: '3'
 
 services:
-  # ui:
-  #   entrypoint: ["npm", "start"]
-  #   environment:
-  #     NODE_ENV: development
-  #   image: node:10.15-alpine
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - ./ui:/opt/ui
-  #   working_dir: /opt/ui
-
   db:
     image: mysql:5.6
     environment:
@@ -30,5 +19,20 @@ services:
       - 8080:80
     depends_on:
       - db
+
+  ui:
+    entrypoint: ["npm", "start"]
+    environment:
+      NODE_ENV: development
+      REACT_APP_DATA_SERVICE_URL: http://localhost:8080/api
+    image: node:20-alpine3.16
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ui:/opt/ui
+    working_dir: /opt/ui
+    depends_on:
+      - db
+      - server
   
   

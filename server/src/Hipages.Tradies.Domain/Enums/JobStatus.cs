@@ -6,5 +6,3 @@ public enum JobStatus
     Accepted,
     Declined
 }
-
-//TODO Case might cause issue??
